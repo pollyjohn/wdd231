@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Shantell+Sans&display=swap');
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: aqua;
+}
+
+/* Navigation links */
+.nav__links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: black;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        background-color: aqua;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav__links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Responsive navigation for large screens */
+@media (min-width: 769px) {
+    .nav__links {
+        display: flex;
+    }
+}
