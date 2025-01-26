@@ -1,77 +1,269 @@
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Shantell+Sans&display=swap');
+@import url('https://fonts.googleapis.om/css2?family=Secular+One&family=Shantell+Sans&display=swap');
 
-/* General reset */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Navbar container */
-.navbar {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    
+}
+
+main{}
+
+/* Header Styles */
+header {
+    background-color: #c03c3c;
+    padding: 1rem;
+}
+
+/* Navigation Styles */
+.nav-bar {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: aqua;
+    z-index: 1000;
+    
 }
 
-/* Navigation links */
-.nav__links {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-}
-
-.nav__link {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-/* Hamburger menu */
+/* Hamburger Button */
 .hamburger {
     display: none;
     flex-direction: column;
-    gap: 4px;
-    border: none;
-    background: none;
     cursor: pointer;
+    background:rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 22%;
 }
 
 .hamburger span {
-    display: block;
     width: 25px;
     height: 3px;
-    background: black;
+    background-color: #2539aa;
+    margin: 3px 0;
+    transition: 0.4s;
 }
 
-/* Responsive design for small screens */
-@media (max-width: 768px) {
+/* Navigation Links */
+.nav__links {
+    display: flex;
+    list-style: none;
+    background: #17a2b8;
+}
+
+.nav__link {
+    
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+    transition: background-color 0.3s;
+    
+    
+}
+
+.nav__link:hover {
+    background-color: #2539aa;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
     .nav__links {
         display: none;
         flex-direction: column;
-        background-color: aqua;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        padding: 1rem;
+        width: 50vw;
+        position: relative;
+        border-radius: 10%;
+        background-color: #000000;
+
     }
 
     .nav__links.active {
         display: flex;
+
     }
 
-    .hamburger {
-        display: flex;
+    .nav__link {
+        text-align: center;
+        
     }
 }
 
-/* Responsive navigation for large screens */
-@media (min-width: 769px) {
-    .nav__links {
-        display: flex;
-    }
+
+
+
+footer {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: rgb(0, 138, 46);
+    text-align: center;
+    
 }
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 5px solid #ff0000;
+  }
+  .course-code, .course-name {
+    padding: 5px;
+  }
+  .completed {
+    color: green;
+  }
+  .filter-btn:hover:before {
+    position: relative;
+    margin-right: 10%;
+    cursor: pointer;
+    background: #36d436;
+    display: inline-flex;
+    padding: 1%;
+    width: 20%;
+    border-radius: 50%;
+  }
+
+  .filter-btn {
+    position: relative;
+    margin-right: 10%;
+    cursor: pointer;
+    background: #36d436;
+    display: inline-flex;
+    padding: 1%;
+    width: 20%;
+    border-radius: 1ch;
+  }
+
+  .about {
+    
+    display:flex;
+    flex-wrap: wrap;
+    background: #2579aa;
+    
+
+  }
+
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 1rem
+  }
+
+
+
+
+
+  .course-box{
+    
+    min-height: 25vw;
+    background: #2539aa;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow: hidden;
+  }
+  
+  #course-list {
+    display:inline-flex;
+    justify-content:space-evenly;
+    gap: 1rem;
+    flex-wrap:wrap;    
+  }
+
+  #course {
+    position: relative;
+    width: calc((100vw / 4));
+    flex: 1;
+    min-width: 150px;
+    flex-wrap:wrap;
+    border-bottom:4ch ;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+  h2 {
+    background-color: rgb(15, 56, 236);
+  }
+
+
+
+  .btn{
+    display:inline-block;
+    font-weight:400;
+    color:#212529;
+    text-align:center;
+    vertical-align:middle;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    background-color:transparent;
+    border:1px solid transparent;
+    padding:.375rem .75rem;
+    font-size:1rem;
+    line-height:1.5;
+    border-radius:.25rem;
+    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}
+    @media (prefers-reduced-motion:reduce){
+        .btn{transition:none}
+        }
+    .btn:hover{
+        color:#212529;text-decoration:none
+        }
+    .btn.focus,.btn:focus{
+        outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)
+        }
+        
+    .btn.disabled,.btn:disabled{
+        opacity:.65}
+    .btn:not(:disabled):not(.disabled){
+        cursor:pointer
+        }
+    a.btn.disabled,fieldset:disabled a.btn{
+        pointer-events:none
+        }
+
+
+  .btn-success{
+    color:#fff;
+    background-color:#28a745;
+    border-color:#28a745
+    }
+  .btn-success:hover{
+    color:#fff;
+    background-color:#218838;
+    border-color:#1e7e34
+    }
+   .btn-success.focus,.btn-success:focus{
+    color:#fff;
+    background-color:#218838;
+    border-color:#1e7e34;
+    box-shadow:0 0 0 .2rem rgba(72,180,97,.5)
+    }
+    .btn-success.disabled,.btn-success:disabled{
+        color:#fff;background-color:#28a745;border-color:#28a745
+        }
+    .btn-success:not(:disabled):not(.disabled).active,.btn-success:not(:disabled):not(.disabled):active,.show>.btn-success.dropdown-toggle{color:#fff;background-color:#1e7e34;border-color:#1c7430}.btn-success:not(:disabled):not(.disabled).active:focus,.btn-success:not(:disabled):not(.disabled):active:focus,.show>.btn-success.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(72,180,97,.5)}
+    .btn-info{color:#fff;
+        background-color:#17a2b8;
+        border-color:#17a2b8
+    }
+
+    section {
+        position: relative;
+        margin-bottom: 0.11rem;
+    }

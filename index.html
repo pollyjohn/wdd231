@@ -3,46 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="This is the course page">
-     <meta name="author" content="João Paulo Pires"> 
-     <link rel="stylesheet" href="styles/style.css">
-    <title>Course page</title>
+    <meta name="description" content="Responsive Course Page">
+    <meta name="author" content="João Paulo Pires">
+    <link rel="sheet" href="styles/style.css">
+    <title>Course Page</title>
+    <script src="scripts/hanburgerNav.js" defer></script>
+    <script src="scripts/features.js" defer></script>
+    <script  src="scripts/courses.js" defer></script>
+
+
 </head>
-<body style="background-color: bisque;">
-    <header style="background-color: aqua;">
+<body>
+    <header>
         <nav class="nav-bar">
-            <button class="hamburger" aria-label="toggle navigation">
+            <button class="hamburger" aria-label="Toggle Navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav__links">
-                <li><a href="index.html"  class="nav__link" >Home</a></li>
+                <li><a href="index.html" class="nav__link">Home</a></li>
                 <li><a href="GitHub.html" class="nav__link">Github Profile</a></li>
-                <li><a href="linkedin.html" class="nav__link">linkedin</a></li>
-                <li><a href="chamber" class="nav__link">chamber</a></li>
+                <li><a href="linkedin.html" class="nav__link">LinkedIn</a></li>
+                <li><a href="chamber" class="nav__link">Chamber</a></li>
             </ul>
         </nav>
-        <h1>Course page</h1>
+        <h1>Course Page</h1>
     </header>
-    <main style= "position: relative; background:aquamarine; height:100vw;">
-        <section class="section__container">
-            <h2>Course</h2>
-            <p>This is the course page</p>
+
+    <main>
+        <div class="about">
+            <section id="course-work" class="col-6">
+                <h2>Course Work</h2>
+                <ul></ul> 
+                    <li> a</li>
+                    <li> b</li>
+                    <li>c</li>
+                </ul>
+                
+            </section>
+            <section class="col-6">
+                <h2>Additional Section</h2>
+                <p>More content can be added here.</p>
+            </section>
+        </div>
+
+
+
+        <section class="course-box">
+            <h2 >Web and Compoter Programing Certificate</h2>
+            <div class="filters">
+                <span class="filter-btn" data-filter="All">All</span>
+                <span class="filter-btn" data-filter="CSE">CSE</span>
+                <span class="filter-btn" data-filter="WDD">WDD</span>
+            </div>
+
+           
+            <div id="course-list">
+                <ol>
+                    <button id="course" class="btn-success btn" >CSE 110</button>
+                    <button id="course" class="btn-success btn" >WDD 130 </button>
+                    <button id="course" class="btn-success btn" >CSE 111 </button>
+                    <button id="course" class="btn-success btn" >CSE 210 </button>
+                    <button id="course" class="btn-success btn" >WDD 131 </button>
+                    <button id="course" class="btn-success btn" >WDD 231 </button>
+                </ol>
+            </div>
+            
         </section>
-        <section>
-            <h2></h2>
-        </section>
-        <section>
-            <h2></h2>
-        </section>
-        
     </main>
+
     <footer>
-        <span id="releaseyear"></span>
-        <p></p>
-        <p></p>
-        
+        <p>&copy; <span id="releaseyear"></span> Your Name</p>
+        <p>Last Updated: <span id="lastUpdated"></span></p>
     </footer>
+
 </body>
 </html>
