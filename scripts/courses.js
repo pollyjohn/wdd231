@@ -1,4 +1,3 @@
-// Course List Array
 const courses = [
     {
       code: "CSE 110",
@@ -30,12 +29,7 @@ const courses = [
       name: "Server-Side Scripting",
       completed: false
     },
-    {
-        code: "aleatorio",
-        name: "noname",
-        completed: "true"
-
-    }
+    
   ];
   
 
@@ -52,7 +46,7 @@ const courses = [
         button.textContent = course.code;
 
         if (course.completed === true || course.completed === "true") {
-            button.className = "btn-info btn"; // Use a different Bootstrap class for completed courses
+            button.className = "btn-info btn"; 
         } else {
             button.className = "btn-success btn";
         }
@@ -60,17 +54,16 @@ const courses = [
         button.style.display = "inline-flex";
         button.textContent = course.code;
         
-        // Opcional: adicionar título com informações completas
         button.title = `${course.code} - ${course.name} (${course.completed ? 'Completed' : 'In Progress'})`;
         
         ol.appendChild(button);
     });
     
-    courseList.innerHTML = ''; // Limpa o conteúdo atual
+    courseList.innerHTML = ''; 
     courseList.appendChild(ol);
 }
 
-// Função para filtrar os cursos
+
 function filterCourses(filterBy = "All") {
     const courseButtons = document.querySelectorAll("#course");
     
@@ -86,7 +79,7 @@ function filterCourses(filterBy = "All") {
     });
 }
 
-// Adicionar event listeners aos botões de filtro
+
 document.querySelectorAll(".filter-btn").forEach(btn => {
     btn.addEventListener("click", () => {
         const filterBy = btn.dataset.filter;
@@ -94,6 +87,6 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
     });
 });
 
-// Inicializar a página
+
 createCourseButtons();
 filterCourses();

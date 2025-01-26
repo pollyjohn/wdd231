@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Responsive Course Page">
     <meta name="author" content="João Paulo Pires">
-    <link rel="sheet" href="styles/style.css">
-    <title>Course Page</title>
+    <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/hanburgerNav.js" defer></script>
     <script src="scripts/features.js" defer></script>
-    <script  src="scripts/courses.js" defer></script>
+    <script  src="scripts/courses.js"defer></script>
+    <title>Course Page</title>
+
 
 
 </head>
 <body>
     <header>
-        <nav class="nav-bar">
-            <button class="hamburger" aria-label="Toggle Navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav__links">
-                <li><a href="index.html" class="nav__link">Home</a></li>
-                <li><a href="GitHub.html" class="nav__link">Github Profile</a></li>
-                <li><a href="linkedin.html" class="nav__link">LinkedIn</a></li>
-                <li><a href="chamber" class="nav__link">Chamber</a></li>
-            </ul>
-        </nav>
-        <h1>Course Page</h1>
+        <div class ="header">
+            <img src="images/file.enc" alt="Brasília">
+            <h1>João Paulo Alves</h1>
+        </div>
+        <div>
+            <nav class="nav-bar">
+                <button  class="hamburger" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav__links">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="GitHub.html" class="nav__link">Github Profile</a></li>
+                    <li><a href="linkedin.html" class="nav__link">LinkedIn</a></li>
+                    <li><a href="chamber" class="nav__link">Chamber</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -43,13 +49,12 @@
                 
             </section>
             <section class="col-6">
-                <h2>Additional Section</h2>
-                <p>More content can be added here.</p>
+                <h2>Brasília, Brazil</h2>
+                <img  src="images/Brasil-puente-JK-1.jpg" alt="Brasília"> 
+                <span style="position: relative; top: 11vw; left: 13vw;">Juscelino Kusbschchek bridge</span> 
             </section>
         </div>
-
-
-
+        <div>
         <section class="course-box">
             <h2 >Web and Compoter Programing Certificate</h2>
             <div class="filters">
@@ -71,12 +76,15 @@
             </div>
             
         </section>
+    </div>
+
     </main>
 
-    <footer>
+    
+<footer>
         <p>&copy; <span id="releaseyear"></span> Your Name</p>
         <p>Last Updated: <span id="lastUpdated"></span></p>
-    </footer>
-
+</footer>
 </body>
+
 </html>
