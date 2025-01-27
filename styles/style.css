@@ -328,6 +328,19 @@ footer {
     }
 
     section {
-        height: 25vh;
+        height: 35vh;
         background:#e2dfdf;
     }
+
+
+    .location img {
+      width: calc((80/100)*35vw);
+      height: calc((80/100)*25vh);
+      left: calc((80/100)*35vw + (calc((80/100)*35vw + 80px))) ;  
+    }
+
+  .location span {
+    position: relative;
+    top: calc((95/100)*25vh);
+       
+     left: calc((55/100)*35vw);}
